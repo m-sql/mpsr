@@ -1,6 +1,6 @@
 #  mpsr (my myPSR)
 
-## 是一个对psr规范 美化和提示PHP的小工具。
+## 是一个对PSR 美化 和 PHP Hacker小工具.
 
 # 功能特点
 * 跨平台支持（支持Linux, Mac环境，Windows环境理论上也支持，不过未全面测试）
