@@ -5,7 +5,7 @@
 # 功能特点
 * 跨平台支持（支持Linux, Mac环境，Windows环境理论上也支持，不过未全面测试）
 * 目前只支持 PSR 规范协议的七种
-* 支持3查询（mpsr -h  和 mpsr -q  及 mpsr -hack ）
+* 支持3种查询（mpsr -h  和 mpsr -q  及 mpsr -hack ）等......陆续开放中ing
 * 支持PSR信息丰富解读
 
 #  安装使用
@@ -104,6 +104,29 @@ use it!
 
 ```
 
+### 0x01::Hacker搜索
+```
+[root@b1ab791fddae mpsr]# mpsr -hack    
+恭喜你，找到了它: Hack ^_^
+/**
+     * ## 谷歌搜索语法
+
+     * site ：可以限制你搜索范围的域名
+
+     * inurl ：用于搜索网页上包含的URL，这个语法对寻找网页上的搜索，帮助之类的很有用.
+
+     * intext : 只搜索网页<body>部分中包含的文字(也就是忽略了标题、URL等的文字)
+
+     * intitle : 查包含关键词的页面，一般用于社工别人的webshell密码
+
+     * filetype: 搜索文件的后缀或者扩展名
+
+     * intitle：限制你搜索的网页标题
+
+     * link: 可以得到一个所有包含了某个指定URL的页面列表
+
+     * 查找后台地址：site:域名 inurl:login|admin|manage|member|admin_login|login_admin|system|login|user|main|cms
+```
 ## 协议
 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
