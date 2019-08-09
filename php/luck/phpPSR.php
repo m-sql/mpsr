@@ -6,6 +6,7 @@
  */
 class PSRLearning
 {
+    use Hack;
     /**
      * PHP标准规范 自定符
      */
@@ -143,7 +144,7 @@ $m_psr = PSRLearning::$M_PSR . PHP_EOL;
 
 //---------------------------------------------------------------------------------------------------------------------
 /**
- * 帮助信息：msql -h
+ * 帮助信息：mpsr -h
  */
 //---------------------------------------------------------------------------------------------------------------------
 if (isset(array_flip($param_arr)['-h'])) {
@@ -154,9 +155,38 @@ if (isset(array_flip($param_arr)['-h'])) {
 -q : 查找PSR规范 eg:(mpsr -q "psr1"  或者 mpsr -q "psr1")
 
 -h : help something
+
+-g : Google 骇客 search
 .
 
 EOL;
+    die;
+}
+
+//---------------------------------------------------------------------------------------------------------------------
+/**
+ * hacker信息：mpsr -hack
+ */
+//---------------------------------------------------------------------------------------------------------------------
+if (isset(array_flip($param_arr)['-hack'])) {
+    try {
+        $class_name = 'Hack';
+        $reflection = new ReflectionClass ( $class_name );
+        $is_find = false;
+        foreach ($reflection->getMethods() as $key=>$method) {
+                $methodDoc = $reflection->getMethods()[$key]->getDocComment();
+                echo "恭喜你，找到了它: {$class_name} ^_^" . PHP_EOL;
+                echo $methodDoc . PHP_EOL;
+                $is_find = true;
+        }
+        if (!$is_find) {
+            echo 'Hacker，请重试一下^_-' . PHP_EOL;
+            echo '如果没有，请联系Hacker：Email:lucklidi@126.com' . PHP_EOL;
+        }
+        exit("---the end---\n");
+    } catch (Exception $e) {
+        echo 'error=' . $e->getMessage() . PHP_EOL;
+    }
     die;
 }
 
@@ -187,7 +217,7 @@ EOL;
         $class_name = 'PSRLearning';
         $reflection = new ReflectionClass ( $class_name );
         //通过反射获取类的注释
-        $doc = $reflection->getDocComment ();
+        //$doc = $reflection->getDocComment ();
         $is_find = false;
         foreach ($reflection->getMethods() as $key=>$method) {
             if (trim($method->name) === trim($q_value)) {
