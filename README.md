@@ -1,6 +1,6 @@
 #  mpsr (my myPSR)
 
-## 是一个对psr进行学习和辅助提示的PHP规范小工具。
+## 是一个对psr规范 美化和提示PHP的小工具。
 
 # 功能特点
 * 跨平台支持（支持Linux, Mac环境，Windows环境理论上也支持，不过未全面测试）
@@ -16,19 +16,18 @@
 
 ### 0、下载源码
 ```linux
- [root@lidi tmp]# git clone https://github.com/m-sql/mpsr.git
- Cloning into 'that-day'...
- remote: Enumerating objects: 68, done.
- remote: Counting objects: 100% (68/68), done.
- remote: Compressing objects: 100% (46/46), done.
- remote: Total 68 (delta 20), reused 44 (delta 9), pack-reused 0
- Unpacking objects: 100% (68/68), done.
- Checking connectivity... done.
+ [root@b1ab791fddae tmp]# git clone https://github.com/m-sql/mpsr.git
+ Cloning into 'mpsr'...
+ remote: Enumerating objects: 10, done.
+ remote: Counting objects: 100% (10/10), done.
+ remote: Compressing objects: 100% (7/7), done.
+ remote: Total 10 (delta 0), reused 10 (delta 0), pack-reused 0
+ Unpacking objects: 100% (10/10), done.
 ```
 ### 1、linux下执行php
 ``` linux
-[root@lidi tmp]# cd ./m-sql/php/
-[root@lidi php]# php sh.php 
+[root@b1ab791fddae tmp]# cd ./mpsr/php/
+[root@b1ab791fddae php]# php sh.php 
     _   _ _             ____  ____  ____  
    | | | (_)  _ __ ___ |  _ \/ ___||  _ \ 
    | |_| | | | '_ ` _ \| |_) \___ \| |_) |
@@ -64,7 +63,7 @@ use it!
 ```
 ##### II::查看帮助
 ```
-[root@lidi php]# mpsr -h
+[root@b1ab791fddae php]# mpsr -h
     _   _ _             ____  ____  ____  
    | | | (_)  _ __ ___ |  _ \/ ___||  _ \ 
    | |_| | | | '_ ` _ \| |_) \___ \| |_) |
@@ -81,10 +80,11 @@ use it!
 
 -h : help something
 .
+
 ```
 ### III::执行mpsr查询
 ```
-[root@lidi php]# mpsr -q "psr4"
+[root@b1ab791fddae php]# mpsr -q "psr4"
 恭喜你，找到了它: psr4 ^_^
 /**
      * 自动加载规范:
