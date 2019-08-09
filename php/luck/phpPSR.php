@@ -152,11 +152,11 @@ if (isset(array_flip($param_arr)['-h'])) {
     echo <<<EOL
 参数说明：
 
--q : 查找PSR规范 eg:(mpsr -q "psr1"  或者 mpsr -q "psr1")
+-q    : 查找PSR规范 eg:(mpsr -q "psr1"  或者 mpsr -q "psr1")
 
--h : help something
+-h    : help something
 
--g : Google 骇客 search
+-hack : Google 骇客 search
 .
 
 EOL;
