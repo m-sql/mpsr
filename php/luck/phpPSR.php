@@ -1,4 +1,5 @@
 <?php
+require("hack.php");
 /**
  * PSR 是 PHP Standard Recommendations 的简写
  * @since https://psr.phphub.org/
